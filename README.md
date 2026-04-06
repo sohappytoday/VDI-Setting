@@ -14,4 +14,17 @@
 
 ## VDI Performance  
 
-hello
+### IP  
+
+```shell
+hostname -I
+```
+- 163.239.77.98  
+
+### OS  
+
+```shell
+cat /etc/os-release
+```
+
+- Ubuntu 25.04 (debian)
