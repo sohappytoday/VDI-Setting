@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-server
+  name: gromit-is-best
   labels:
-    app: hello-server
+    app: geo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-server
+      app: geo
   template:
     metadata:
       labels:
-        app: hello-server
+        app: geo
     spec:
       containers:
       - name: hello-server
@@ -22,12 +22,12 @@ spec:
         - name: PORT
           valueFrom:
             configMapKeyRef:
-              name: hello-server-configmap
+              name: gromit-configmap
               key: PORT
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: hello-server-configmap
+  name: gromit-configmap
 data:
-  PORT: "1234"
+  PORT: "7777"
